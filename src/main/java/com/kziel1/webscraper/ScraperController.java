@@ -40,10 +40,10 @@ public class ScraperController {
         List<ContiExchangeRate> contiExchangeRates = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
             ContiExchangeRate contiExchangeRate = new ContiExchangeRate();
-            contiExchangeRate.setCurrency(tbody.childNode(2*i+1).childNode(3).toString().replaceAll("\\<[^>]*>",""));
-            contiExchangeRate.setUnder4k(new ExchangeRate(tbody.childNode(2*i+1).childNode(5).toString().replaceAll("\\<[^>]*>",""), tbody.childNode(2*i+1).childNode(7).toString().replaceAll("\\<[^>]*>","")));
-            contiExchangeRate.setOver4k(new ExchangeRate(tbody.childNode(2*i+1).childNode(9).toString().replaceAll("\\<[^>]*>",""), tbody.childNode(2*i+1).childNode(11).toString().replaceAll("\\<[^>]*>","")));
-            contiExchangeRate.setCashless(new ExchangeRate(tbody.childNode(2*i+1).childNode(13).toString().replaceAll("\\<[^>]*>",""), tbody.childNode(2*i+1).childNode(15).toString().replaceAll("\\<[^>]*>","")));
+            contiExchangeRate.setCurrency(tbody.childNode(2 * i + 1).childNode(3).toString().replaceAll("\\<[^>]*>", ""));
+            contiExchangeRate.setUnder4k(new ExchangeRate(tbody.childNode(2 * i + 1).childNode(5).toString().replaceAll("\\<[^>]*>", ""), tbody.childNode(2 * i + 1).childNode(7).toString().replaceAll("\\<[^>]*>", "")));
+            contiExchangeRate.setOver4k(new ExchangeRate(tbody.childNode(2 * i + 1).childNode(9).toString().replaceAll("\\<[^>]*>", ""), tbody.childNode(2 * i + 1).childNode(11).toString().replaceAll("\\<[^>]*>", "")));
+            contiExchangeRate.setCashless(new ExchangeRate(tbody.childNode(2 * i + 1).childNode(13).toString().replaceAll("\\<[^>]*>", ""), tbody.childNode(2 * i + 1).childNode(15).toString().replaceAll("\\<[^>]*>", "")));
             contiExchangeRates.add(contiExchangeRate);
         }
         return contiExchangeRates;
