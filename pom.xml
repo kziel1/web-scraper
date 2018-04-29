@@ -52,6 +52,7 @@
     </dependencies>
 
     <build>
+        <finalName>web-scraper</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
