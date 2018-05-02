@@ -25,7 +25,7 @@ public class ScraperController {
         Node node = null;
         try {
             doc = Jsoup.connect("http://www.kantorconti.pl/pl/").get();
-            node = doc.select("tbody tr:nth-child(2)").get(0).childNode(9);
+            node = doc.select("tbody tr:nth-child(4)").get(0).childNode(9);
 //            extractContiExchangeRates(doc);
         } catch (IOException e) {
             e.printStackTrace();
