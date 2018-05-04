@@ -11,5 +11,6 @@ public class WebScraperApplicationTests {
     @Test
     public void contextLoads() {
 //test
+        System.out.println("unittest");
     }
 }

@@ -19,7 +19,7 @@ public class ScraperController {
 
     @RequestMapping("/")
     @ResponseBody
-    String getUsd() {
+    public String getUsd() {
 
         Document doc = null;
         Node node = null;
@@ -35,7 +35,8 @@ public class ScraperController {
         return node == null ? "error" : extractContiExchangeRates(doc).toString();
     }
 
-    private List<ContiExchangeRate> extractContiExchangeRates(Document doc) {
+    //TODO private and in another class
+    public List<ContiExchangeRate> extractContiExchangeRates(Document doc) {
         Element tbody = doc.select("tbody").get(1);
         List<ContiExchangeRate> contiExchangeRates = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
